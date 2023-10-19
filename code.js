@@ -65,12 +65,12 @@ function _dijkstra(graph, sourceNode, visited, dist)
 // call algorithm
 function dijkstra(graph, sourceNode) 
 {
+    if (graph.length < 1 || graph[0].length < 1) return []
     var dist = Array(graph.length).fill(Infinity) 
     let visited = Array(graph.length).fill(false) 
 
     let shortestPaths = _dijkstra(graph, sourceNode, visited, dist)
     
-    //console.log(shortestPaths)
     return shortestPaths
 }
 
